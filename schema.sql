@@ -1,11 +1,11 @@
 /* Database schema to keep the structure of entire database. */
 
 CREATE TABLE animals(
-  id                 integer,
-  name               CHAR(50),
-  date_of_birth      date,
-  escape_attempts    integer,
-  neutered           boolean,
-  weight_kg          decimal,
+  id                INT GENERATED ALWAYS AS IDENTITY,
+  name              CHAR(200),
+  date_of_birth     DATE,
+  escape_attempts   INT,
+  neutered          BOOLEAN,
+  weight_kg         DECIMAL,
   PRIMARY KEY(id)
 );
