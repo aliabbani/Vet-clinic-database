@@ -2,7 +2,7 @@
 
 CREATE TABLE animals(
   id                INT GENERATED ALWAYS AS IDENTITY,
-  name              CHAR(200),
+  name              CHAR(30),
   date_of_birth     DATE,
   escape_attempts   INT,
   neutered          BOOLEAN,
