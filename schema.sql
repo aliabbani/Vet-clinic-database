@@ -2,7 +2,7 @@
 
 CREATE TABLE animals(
   id                 integer,
-  name               text,
+  name               CHAR(50),
   date_of_birth      date,
   escape_attempts    integer,
   neutered           boolean,
