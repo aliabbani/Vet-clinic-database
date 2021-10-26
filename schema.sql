@@ -1,4 +1,5 @@
 /* Database schema to keep the structure of entire database. */
+/* ALTER TABLE animals ADD species VARCHAR(50); */
 
 CREATE TABLE animals(
   id INT GENERATED ALWAYS AS IDENTITY,
