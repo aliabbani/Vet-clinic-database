@@ -23,3 +23,18 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Boarmon', '2005-06-07', 7, true, 20.4);
 /* Animal: Her name is Blossom. She was born on Oct 13th, 1998, and currently weighs 17kg. She is neutered and she has tried to escape 3 times. */
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom', '1998-10-13', 3, true, 17);
+
+
+-- Insert the following data into the owners table:
+-- Sam Smith 34 years old.
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
+-- Jennifer Orwell 19 years old.
+INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
+-- Bob 45 years old.
+INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
+-- Melody Pond 77 years old.
+INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
+-- Dean Winchester 14 years old.
+INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
+-- Jodie Whittaker 38 years old.
+INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
