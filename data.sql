@@ -23,3 +23,46 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Boarmon', '2005-06-07', 7, true, 20.4);
 /* Animal: Her name is Blossom. She was born on Oct 13th, 1998, and currently weighs 17kg. She is neutered and she has tried to escape 3 times. */
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom', '1998-10-13', 3, true, 17);
+
+
+-- Insert the following data into the owners table:
+-- Sam Smith 34 years old.
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
+-- Jennifer Orwell 19 years old.
+INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
+-- Bob 45 years old.
+INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
+-- Melody Pond 77 years old.
+INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
+-- Dean Winchester 14 years old.
+INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
+-- Jodie Whittaker 38 years old.
+INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
+
+-- Insert the following data into the species table:
+-- Pokemon
+INSERT INTO species (name) VALUES ('Pokemon');
+-- Digimon
+INSERT INTO species (name) VALUES ('Digimon');
+
+-- Modify your inserted animals so it includes the species_id value:
+-- If the name ends in "mon" it will be Digimon
+-- All other animals are Pokemon
+BEGIN;
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+UPDATE animals SET species_id = 1 WHERE species_id IS NULL;
+COMMIT;
+
+-- Modify your inserted animals to include owner information (owner_id):
+BEGIN;
+-- Sam Smith owns Agumon.
+UPDATE animals SET owners_id = 1 WHERE name LIKE 'Agumon';
+-- Jennifer Orwell owns Gabumon and Pikachu.
+UPDATE animals SET owners_id = 2 WHERE id IN (2, 3);
+-- Bob owns Devimon and Plantmon.
+UPDATE animals SET owners_id = 3 WHERE id IN (4, 11);
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+UPDATE animals SET owners_id = 4 WHERE id IN (5, 7, 10);
+-- Dean Winchester owns Angemon and Boarmon.
+UPDATE animals SET owners_id = 5 WHERE id IN (8, 9);
+COMMIT;
