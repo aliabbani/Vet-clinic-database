@@ -66,3 +66,71 @@ UPDATE animals SET owners_id = 4 WHERE id IN (5, 7, 10);
 -- Dean Winchester owns Angemon and Boarmon.
 UPDATE animals SET owners_id = 5 WHERE id IN (8, 9);
 COMMIT;
+
+
+
+-- Insert the following data for vets:
+BEGIN;
+-- Vet William Tatcher is 45 years old and graduated Apr 23rd, 2000.
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23');
+-- Vet Maisy Smith is 26 years old and graduated Jan 17th, 2019.
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-01-17');
+-- Vet Stephanie Mendez is 64 years old and graduated May 4th, 1981.
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
+-- Vet Jack Harkness is 38 years old and graduated Jun 8th, 2008.
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
+COMMIT;
+
+-- Insert the following data for specialties:
+BEGIN;
+-- Vet William Tatcher is specialized in Pokemon.
+INSERT INTO specializations (species_id, vets_id) VALUES (1, 2);
+-- Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+INSERT INTO specializations (species_id, vets_id) VALUES (1, 4);
+-- Vet Jack Harkness is specialized in Digimon.
+INSERT INTO specializations (species_id, vets_id) VALUES (2, 5);
+COMMIT;
+
+-- Insert the following data for visits:
+BEGIN;
+-- Agumon visited William Tatcher on May 24th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (1, 2, '2020-05-24');
+-- Agumon visited Stephanie Mendez on Jul 22th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (1, 4, '2020-07-22');
+-- Gabumon visited Jack Harkness on Feb 2nd, 2021.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (2, 5, '2021-02-02');
+-- Pikachu visited Maisy Smith on Jan 5th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (3, 3, '2020-01-05');
+-- Pikachu visited Maisy Smith on Mar 8th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (3, 3, '2020-03-08');
+-- Pikachu visited Maisy Smith on May 14th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (3, 3, '2020-05-14');
+-- Devimon visited Stephanie Mendez on May 4th, 2021.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (4, 4, '2021-05-04');
+-- Charmander visited Jack Harkness on Feb 24th, 2021.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (5, 5, '2021-02-24');
+-- Plantmon visited Maisy Smith on Dec 21st, 2019.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (11, 3, '2019-12-21');
+-- Plantmon visited William Tatcher on Aug 10th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (11, 2, '2020-08-10');
+-- Plantmon visited Maisy Smith on Apr 7th, 2021.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (11, 3, '2021-04-07');
+-- Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (7, 4, '2019-09-29');
+-- Angemon visited Jack Harkness on Oct 3rd, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (8, 5, '2020-10-03');
+-- Angemon visited Jack Harkness on Nov 4th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (8, 5, '2020-11-04');
+-- Boarmon visited Maisy Smith on Jan 24th, 2019.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 3, '2019-01-24');
+-- Boarmon visited Maisy Smith on May 15th, 2019.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 3, '2019-05-15');
+-- Boarmon visited Maisy Smith on Feb 27th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 3, '2020-02-27');
+-- Boarmon visited Maisy Smith on Aug 3rd, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 3, '2020-08-03');
+-- Blossom visited Stephanie Mendez on May 24th, 2020.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (10, 4, '2020-05-24');
+-- Blossom visited William Tatcher on Jan 11th, 2021.
+INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (10, 2, '2021-01-11');
+COMMIT;
