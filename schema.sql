@@ -66,3 +66,8 @@ CREATE TABLE visits(
 
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons.
+CREATE INDEX visits_animals_id_asc ON visits(animals_id ASC);
+\d visits
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animalS_id = 4;
