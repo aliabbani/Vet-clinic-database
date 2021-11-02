@@ -150,3 +150,6 @@ insert into owners (full_name, email) select 'Owner ' || generate_series(1,25000
 
 -- Depening on your machine speed, it might be enough or not. Check that by running 
 explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
