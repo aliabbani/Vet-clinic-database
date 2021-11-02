@@ -4,6 +4,7 @@
 > Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
 
 ## Diagram
+[Lucid chart link to schema diagram](https://lucid.app/lucidchart/921d577d-4fe4-468c-aeb7-15aacbee1bb8/edit?viewport_loc=-180%2C-308%2C2220%2C974%2C0_0&invitationId=inv_6e63796d-4110-4f38-80c7-198fdbf85985)
 ![screenshot](./images/diagram.png)
 
 This project is about using a relational database to create the data structure for a vet clinic. Starting with one table, and step by step will create a complete database with data about:
