@@ -73,6 +73,10 @@ CREATE INDEX visits_animals_id_asc ON visits(animals_id ASC);
 \d visits
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animalS_id = 4;
 
+-- Decrease the execution time of the first query.
+CREATE INDEX visits_visits_id_asc ON visits(vets_id ASC);
+EXPLAIN ANALYZE SELECT * FROM visits WHERE vets_id = 2;
+
 -- Decrease he execution time of the third query
 EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
 CREATE INDEX owners_email_asc ON owners(email ASC);
