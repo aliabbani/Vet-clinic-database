@@ -25,6 +25,8 @@ CREATE TABLE medical_histories (
       REFERENCES patients(id)
 );
 
+CREATE INDEX ON medical_histories (patient_id);
+
 CREATE TABLE treatments (
   id INT SERIAL,
   type VARCHAR(50),
@@ -48,6 +50,9 @@ CREATE TABLE invoice_items (
       REFERENCES treatments(id)
 );
 
+CREATE INDEX ON invoice_items (invoice_id);
+CREATE INDEX ON invoice_items (treatment_id);
+
 CREATE TABLE history_treatment_connection (
   id  INT SERIAL,
   treatment_id INT,
@@ -60,3 +65,6 @@ CREATE TABLE history_treatment_connection (
     FOREIGN KEY (history_id)
       REFERENCES medical_histories(id)
 );
+
+CREATE INDEX ON history_treatment_connection (treatment_id);
+CREATE INDEX ON history_treatment_connection (history_id);
